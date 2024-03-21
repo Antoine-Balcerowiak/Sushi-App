@@ -40,7 +40,7 @@ export class PanierComponent {
     this.monPanier = [];
   }
   reload(){
-    location.reload
+    location.reload()
   }
     
   
