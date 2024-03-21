@@ -39,6 +39,9 @@ export class PanierComponent {
     localStorage.setItem("panier","[]")
     this.monPanier = [];
   }
+  reload(){
+    location.reload
+  }
     
   
 
