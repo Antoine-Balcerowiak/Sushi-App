@@ -1,0 +1,33 @@
+<div *ngIf="historiqueCommandes.length > 0" class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numéro de la commande</th>
+                <th>Détails de la commande</th>
+                <th>Prix total de la commande</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let commande of historiqueCommandes; let i = index">
+                <td>Commande #{{ i + 1 }}</td>
+                <td>
+                    <ul>
+                        <li *ngFor="let item of commande">
+                            <div>
+                                <h3>{{ item.boxes.nom }}</h3>
+                                <p>Quantité: {{ item.quantite }}</p>
+                                <p>Prix total: {{ item.boxes.prix * item.quantite | number:'1.2-2' }} €</p>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+                <td>{{ PrixTotalCommande(commande) | number:'1.2-2' }} €</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="historiqueCommandes.length == 0" class="historique-container">
+    <p>Aucune commande dans l'historique</p>
+</div>
+

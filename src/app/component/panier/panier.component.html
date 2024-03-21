@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="panier.component.css">
+<div *ngIf="monPanier" class="panier-container">
+    <div>
+        <table class="panier-table">
+            <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let panier of monPanier">
+                    <th scope="row">{{panier.boxes.nom}}</th>
+                    <td style="text-align: center;"><button (click)="retrait(panier.boxes)">-</button>
+                        {{panier.quantite}} <button (click)="ajout(panier.boxes)"> +</button></td>
+                    <td>{{panier.boxes.prix * panier.quantite | number:'1.2-2'}} €</td>
+                    <td><button class="bi bi-trash3" (click)="Poubelle(panier)"></button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">Prix total</th>
+                    <td>{{ total() | number:'1.2-2'}} €</td>
+                </tr>
+            </tfoot>
+
+        </table>
+        <div *ngIf="total() > 0">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paye" (click)="historique()">
+                Paye
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="paye" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Commande Validé
+                        </div>
+                        <div class="modal-footer">
+                            
+                            <div>
+                                <button type="button" class="btn btn-primary" >
+                                    <a class="nav-link active" href="/menu" 
+                                        style="color: white;">ok
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <app-footer></app-footer>

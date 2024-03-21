@@ -1,0 +1,33 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-top: 5%;
+    border: transparent;
+}
+
+.card-image img{
+    width: 200%;
+    height: 100%;
+}
+  .aliments{
+    
+    list-style: circle;
+  }
+  
+  li {
+
+    list-style: none;
+  }
+  
+  .titre {
+    font-weight: bold;
+  }
+  .nom{
+    font-weight: bold;
+    
+
+  }
+  

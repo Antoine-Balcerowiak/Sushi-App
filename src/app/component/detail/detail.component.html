@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" href="detail.component.css">
+<!-- fichier HTML du composant de détails (detail.component.html) -->
+<div *ngIf="boxes" class="card-container">
+  <div *ngFor="let box of boxes">
+
+    <div class="card" *ngIf="box.id == objetId">
+      <!-- Image -->
+      <div class="card-image">
+        <img src="http://localhost:8080/api/image/{{ box.image }}" alt="Orange" />
+      </div>
+      <ul>
+        <h2 class="nom">{{box.nom}}</h2>
+        <h5>{{box.pieces}} pièces</h5>
+        <h3 class="nom">{{box.prix}}0 €</h3>
+        <p class="titre">saveurs: </p>
+        <p style="text-transform: capitalize;">{{box.saveurs}}</p>
+        <p class="titre">aliments : </p>
+        <div *ngFor="let aliment of box.aliments">
+          <li class="aliments">{{aliment.quantite}} {{aliment.nom}} </li>
+          
+        </div>
+        
