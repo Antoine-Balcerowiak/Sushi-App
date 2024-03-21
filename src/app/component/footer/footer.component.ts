@@ -16,5 +16,8 @@ export class FooterComponent {
   total(){
     return this.panierService.calculateTotal()
   }
+  reload(){
+    location.reload()
+  }
 
 }
