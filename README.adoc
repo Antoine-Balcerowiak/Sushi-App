@@ -325,6 +325,9 @@ Ensuite pour afficher le panier il faut cliquer sur panier dans le footer
 image::img/PanierFooter.png[]
 
 Voila l'affichage du panier avec la box sa quantité son prix total par rapport au nombre de box et le prix total du panier
+
+image::img/PanierAffichage.png[]
+
 puis quand on appuie sur paye sa confirme le paiment
 
 image::img/confirmationPaye.png[]
