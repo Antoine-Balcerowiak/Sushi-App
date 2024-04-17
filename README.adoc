@@ -310,4 +310,23 @@ Le résultat final
 
 image::img/DetailFinal.png[]
 
+== Panier et historique
+
+tout d'abord pour ajouter au panier il faut cliquer sur le plus qui à coter du prix
+
+image::img/ajoutPanier.png[]
+
+Ensuite pour afficher le panier il faut cliquer sur panier dans le footer
+
+image::img/PanierFooter.png[]
+
+Voila l'affichage du panier avec la box sa quantité son prix total par rapport au nombre de box et le prix total du panier
+puis quand on appuie sur paye sa confirme le paiment
+
+image::img/confirmationPaye.png[]
+
+
+puis sa ajoute la commande dans l'historique
+
+image::img/historiqueSite.png[]
 
