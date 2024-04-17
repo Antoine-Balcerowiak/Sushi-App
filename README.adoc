@@ -6,6 +6,10 @@ Réalisé par :
 
 - Balcerowiak Antoine
 
+site : https://antoine-balcerowiak.github.io/Sushi-App/menu
+
+github : https://github.com/Antoine-Balcerowiak/Sushi-App
+
 Date début : Mars 2024
 
 == Contexte
